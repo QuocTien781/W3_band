@@ -1,0 +1,117 @@
+html {
+    background-color: #ccc;
+}
+.btn--show {
+    display: flex;
+    
+}
+.btn {
+  padding: 8px 16px;
+  cursor: pointer;
+ 
+}
+.btn + .btn {
+    margin-left: 8px;
+}
+.btn--success {
+    background-color: rgb(18, 211, 98);
+}
+.btn--infor {
+    background-color: hotpink;
+}
+.btn--warning {
+    background-color: gold;
+}
+.btn--error {
+    background-color: red;
+}
+.toast {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+   
+}
+.toast {
+    display: flex; 
+    background-color: #fff;
+    padding:20px 0;
+    margin-top: 16px;
+    min-width: 280px ;
+    width: 30%;
+    border-left: 3px solid;
+    font-size: 16px;
+    align-items: center;
+    border-radius: 2px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    animation: showToast ease 0.3s, fadeOut linear 1s 3s forwards;
+
+
+}
+@keyframes showToast {
+    from {
+     transform: translateX(calc(100% + 32px));
+     opacity: 0;
+    }
+    to {
+    opacity: 1;
+    transform: translateX(0); 
+    }
+}
+/* Làm mờ dần Toast */
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+/* .toast + .toast {
+    margin-top: 16px;
+} */
+.toast--success {
+    border-color: green;
+}
+.toast--success .toast__icon {
+    color: rgb(18, 211, 98);
+}
+.toast--infor {
+    border-color: hotpink;
+}
+.toast--infor .toast__icon {
+    color: hotpink;
+
+}
+.toast--warning {
+    border-color: gold;
+}
+.toast--warning .toast__icon {
+    color:gold ;
+
+}
+.toast--error {
+    border-color:red;
+}
+.toast--error .toast__icon {
+    color:red ;
+
+}
+.toast__close,
+.toast__icon {
+    padding: 0 16px;
+}
+.toast__close,
+.toast__icon {
+    font-size: 24px;
+}
+.toast__body {
+    flex-grow: 1;
+}
+.toast__tittle {
+    margin: 0 8px;
+    
+    }
+.toast__msg {
+    margin: 0 8px;
+    }
+.toast__close {
+    color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
